@@ -31,6 +31,9 @@ public class Booking {
         this.car = car;
     }
 
+    public Booking() {
+    }
+    
     public LocalDateTime getPickUpTime() {
         return pickUpTime;
     }
