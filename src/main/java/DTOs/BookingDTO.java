@@ -5,8 +5,8 @@
  */
 package DTOs;
 
-import Entities.Booking;
-import Entities.Driver;
+import entities.Booking;
+import entities.Driver;
 
 /**
  *
@@ -25,9 +25,9 @@ public class BookingDTO implements DTO<Booking>
     public BookingDTO(Booking booking) {
         this.pickUpTime = booking.getPickUpTime().toString();
         this.deliveryTime = booking.getDeliveryTime().toString();
-        this.totalPrice = booking.getTotalPrice();
         this.pickUpPlace = booking.getPickUpPlace().getName();
         this.deliveryPlace = booking.getDeliveryPlace().getName();
+        this.totalPrice = booking.getTotalPrice();
         
         Driver d = booking.getDriver();
         this.driver = new DriverDTO(d.getName(), d.getAge(), d.getDriverLicenseNumber());

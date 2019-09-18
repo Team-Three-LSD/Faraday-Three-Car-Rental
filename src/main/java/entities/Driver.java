@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Entities;
+package entities;
 
 import java.util.List;
 
@@ -13,22 +13,32 @@ import java.util.List;
  */
 public class Driver {
 
+    private String id;
     private String name;
     private int age;
     private String driverLicenseNumber;
     private List<Booking> bookings;
 
-    public Driver(String name, int age, String driverLicenseNumber, List<Booking> bookings) {
+    public Driver(String id, String name, int age, String driverLicenseNumber, List<Booking> bookings) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.driverLicenseNumber = driverLicenseNumber;
         this.bookings = bookings;
     }
-    
+
     public Driver(String name, int age, String driverLicenseNumber) {
         this.name = name;
         this.age = age;
         this.driverLicenseNumber = driverLicenseNumber;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

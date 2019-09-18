@@ -3,18 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Entities;
-
-import java.util.List;
+package entities;
 
 /**
  *
  * @author stanislavnovitski
  */
-public abstract class Station {
+public class Airport extends Station {
 
+    private String code;
     private String name;
-    private List<Car> cars;
+
+    public Airport(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     public String getName() {
         return name;
@@ -24,11 +35,4 @@ public abstract class Station {
         this.name = name;
     }
 
-    public List<Car> getCars() {
-        return cars;
-    }
-
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
-    }
 }

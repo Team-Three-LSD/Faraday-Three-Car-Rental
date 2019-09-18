@@ -5,15 +5,14 @@
  */
 package DTOs;
 
-import Entities.Booking;
-import Entities.Driver;
+import entities.Driver;
 
 /**
  *
  * @author Orchi
  */
-public class DriverDTO implements DTO<Driver>
-{
+public class DriverDTO implements DTO<Driver> {
+
     public String name;
     public int age;
     public String driverLicenseNumber;
@@ -23,11 +22,10 @@ public class DriverDTO implements DTO<Driver>
         this.age = age;
         this.driverLicenseNumber = driverLicenseNumber;
     }
-    
+
     @Override
-    public Driver fromDTO(){
+    public Driver fromDTO() {
         return new Driver(name, age, driverLicenseNumber);
     }
-    
-}
 
+}
