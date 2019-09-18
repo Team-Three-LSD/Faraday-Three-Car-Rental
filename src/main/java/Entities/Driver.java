@@ -24,6 +24,12 @@ public class Driver {
         this.driverLicenseNumber = driverLicenseNumber;
         this.bookings = bookings;
     }
+    
+    public Driver(String name, int age, String driverLicenseNumber) {
+        this.name = name;
+        this.age = age;
+        this.driverLicenseNumber = driverLicenseNumber;
+    }
 
     public String getName() {
         return name;
