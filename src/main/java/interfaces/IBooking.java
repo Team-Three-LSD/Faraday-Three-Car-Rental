@@ -3,14 +3,10 @@ package interfaces;
 import DTOs.BookingDTO;
 import java.util.List;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
+ * This is an interface used, between the frontend and the backend.
  *
- * @author stanislavnovitski
+ * @since 1.0
  */
 public interface IBooking {
 
@@ -24,4 +20,14 @@ public interface IBooking {
     ) throws Exception;
 
     public List<BookingDTO> searchBooking(String driverLicenseNumber) throws Exception;
+
+    /**
+     * cancelBooking This method takes care of marking a booking as cancelled.
+     *
+     * @param bookingIdentifier this is a booking id.
+     * @return boolean this is a parameter that will return if the operation was
+     * successful.
+     * @since 1.0
+     */
+    boolean cancelBooking(String bookingIdentifier);
 }
