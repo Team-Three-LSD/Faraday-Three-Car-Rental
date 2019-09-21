@@ -11,13 +11,13 @@ package entities;
  */
 public class Car {
 
+    private String licensePlate; // this could be used as an id in DB
     private CarType ct;
 
     public Car(CarType ct, String licensePlate) {
         this.ct = ct;
         this.licensePlate = licensePlate;
     }
-    private String licensePlate;
 
     public CarType getCt() {
         return ct;

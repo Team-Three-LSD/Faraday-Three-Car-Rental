@@ -10,15 +10,41 @@ import java.util.List;
  */
 public interface IBooking {
 
+    /**
+     * addNewBooking This method is used to create a new booking in database
+     * 
+     * @param carTypeName
+     * @param pickUpCity
+     * @param pickUpLocation
+     * @param deliveryLocation
+     * @param startDate
+     * @param endDate
+     * @param driverName
+     * @param driverAge
+     * @param driverLicenseNumber
+     * @param carLicensePlate
+     * @return BookingDTO an representation of the finished booking.
+     * @throws Exception 
+     */
     public BookingDTO addNewBooking(
-            String carType,
+            String carTypeName,
             String pickUpCity,
             String pickUpLocation,
             String deliveryLocation,
             String startDate,
-            String endDate
+            String endDate,
+            String driverName,
+            String driverAge,
+            String driverLicenseNumber,
+            String carLicensePlate     
     ) throws Exception;
 
+    /**
+     *
+     * @param driverLicenseNumber
+     * @return
+     * @throws Exception
+     */
     public List<BookingDTO> searchBooking(String driverLicenseNumber) throws Exception;
 
     /**
