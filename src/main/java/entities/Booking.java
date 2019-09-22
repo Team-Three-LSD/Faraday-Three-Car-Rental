@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Entities;
+package entities;
 
 import java.time.LocalDateTime;
 
@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
  */
 public class Booking {
 
+    private String id;
     private LocalDateTime pickUpTime;
     private LocalDateTime deliveryTime;
     private double totalPrice;
@@ -20,8 +21,11 @@ public class Booking {
     private Station deliveryPlace;
     private Driver driver;
     private Car car;
+    private final double EXTRA_FEE = 10.00; // TODO this can be what ever we decide.
+    private boolean hasExtraFee = false;
 
-    public Booking(LocalDateTime pickUpTime, LocalDateTime deliveryTime, double totalPrice, Station pickUpPlace, Station deliveryPlace, Driver driver, Car car) {
+    public Booking(String id, LocalDateTime pickUpTime, LocalDateTime deliveryTime, double totalPrice, Station pickUpPlace, Station deliveryPlace, Driver driver, Car car) {
+        this.id = id;
         this.pickUpTime = pickUpTime;
         this.deliveryTime = deliveryTime;
         this.totalPrice = totalPrice;
@@ -29,6 +33,23 @@ public class Booking {
         this.deliveryPlace = deliveryPlace;
         this.driver = driver;
         this.car = car;
+
+        // Set the extra fee to true if the delivery place is the same as the pickup
+        if (pickUpPlace.equals(deliveryPlace)) {
+            this.hasExtraFee = true;
+            this.totalPrice += this.EXTRA_FEE;
+        }
+    }
+
+    public Booking() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public LocalDateTime getPickUpTime() {
