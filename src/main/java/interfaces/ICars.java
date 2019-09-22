@@ -6,13 +6,16 @@
 package interfaces;
 
 import DTOs.CarDTO;
+import exceptions.GetAvailableCarsException;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
  *
  * @author stanislavnovitski
  */
-public interface ICars {
+public interface ICars extends Remote{
 
     /**
      * GetAvailableCars This method returns a list containing 0 or more cars
@@ -26,5 +29,5 @@ public interface ICars {
      * can have length >= 0.
      * @since 1.0
      */
-    public List<CarDTO> GetAvailableCars(String carType, String pickUpCity, String rentalStart, String rentalEnd);
+    public List<CarDTO> GetAvailableCars(String carType, String pickUpCity, String rentalStart, String rentalEnd) throws GetAvailableCarsException, RemoteException;
 }

@@ -4,6 +4,7 @@ import entities.CarType;
 
 /**
  * Class representing a Car Data Transfer Object
+ * 
  * @author stanislavnovitski
  */
 public class CarDTO implements DTO {
