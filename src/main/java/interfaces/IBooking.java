@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * This is an interface used, between the frontend and the backend.
- *
+ * 
  * @since 1.0
  */
 public interface IBooking {

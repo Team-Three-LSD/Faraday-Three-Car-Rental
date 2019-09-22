@@ -5,6 +5,8 @@
  */
 package entities;
 
+import java.util.List;
+
 /**
  *
  * @author stanislavnovitski
@@ -12,13 +14,12 @@ package entities;
 public class Hotel extends Station {
 
     private String code;
-    private String name;
     private String address;
     private int starRating;
 
-    public Hotel(String code, String name, String address, int starRating) {
+    public Hotel(String code, String name, List<Car> cars, String address, int starRating) {
+        super(name, cars);
         this.code = code;
-        this.name = name;
         this.address = address;
         this.starRating = starRating;
     }
@@ -29,14 +30,6 @@ public class Hotel extends Station {
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getAddress() {

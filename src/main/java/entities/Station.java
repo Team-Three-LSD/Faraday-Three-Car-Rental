@@ -16,6 +16,11 @@ public abstract class Station {
     private String name;
     private List<Car> cars;
 
+    public Station(String name, List<Car> cars) {
+        this.name = name;
+        this.cars = cars;
+    }
+
     public String getName() {
         return name;
     }
