@@ -4,7 +4,7 @@ import entities.Booking;
 import entities.Driver;
 
 /**
- *
+ * Class representing a Booking Data Transfer Object
  * @author Orchi
  */
 public class BookingDTO implements DTO<Booking>

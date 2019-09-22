@@ -3,7 +3,7 @@ package DTOs;
 import com.google.gson.Gson;
 
 /**
- *
+ * Class representing a Facade to Data Transfer Object usage
  * @author Orchi
  */
 public class DTOFacade {

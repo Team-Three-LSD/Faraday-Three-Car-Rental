@@ -3,7 +3,7 @@ package DTOs;
 import entities.Driver;
 
 /**
- *
+ * Class representing a Driver Data Transfer Object
  * @author Orchi
  */
 public class DriverDTO implements DTO<Driver> {
