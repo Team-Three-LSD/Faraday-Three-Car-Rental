@@ -3,17 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entities;
+package DTOs;
+
+import DTOs.Identifiers.CarTypeIdentifier;
 
 /**
  *
  * @author stanislavnovitski
  */
-public class CarType {
+public class CarTypeDetails extends CarTypeIdentifier {
 
     private String name;
+    private int numberOfSeats;
+    private double pricePerDay;
 
-    public CarType(String name, int numberOfSeats, double pricePerDay) {
+    public CarTypeDetails(String id, String name, int numberOfSeats, double pricePerDay) {
+        super(id);
         this.name = name;
         this.numberOfSeats = numberOfSeats;
         this.pricePerDay = pricePerDay;
@@ -42,7 +47,5 @@ public class CarType {
     public void setPricePerDay(double pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
-    private int numberOfSeats;
-    private double pricePerDay;
 
 }
