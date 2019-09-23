@@ -4,22 +4,27 @@
 [Artifacts](https://github.com/Team-Three-LSD/Artifacts)
 
 ## Team Three
+
+### Frontend
+
 *Oliver Scholz Lønning*
 
 *Yosuke Ueda*
 
-*David de Lima Fraga Alves* 
+*Benjamin Schultz Larsen*
+
+*Jacob Sørensen*
+
+*Alexander Winther Hørsted-Andersen*
+
+### Backend
 
 *Mathias Bigler*
 
-*Jacob Sørensen* 
-
 *Elitsa Miroslavova Marinovska*
-
-*Alexander Winther Hørsted-Andersen* 
 
 *Stanislav Novitski*
 
 *Mathias Brinkmann Igel* 
 
-*Benjamin Schultz Larsen*
+*David de Lima Fraga Alves* 
