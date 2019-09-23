@@ -2,6 +2,7 @@ package interfaces;
 
 import DTOs.BookingDTO;
 import DTOs.BookingIdentifier;
+import exceptions.AddNewBookingException;
 import exceptions.CancelBookingException;
 import exceptions.SearchBookingException;
 import java.rmi.RemoteException;
@@ -29,7 +30,7 @@ public interface IBooking extends java.rmi.Remote {
      * @param driverLicenseNumber
      * @param carLicensePlate
      * @return BookingDTO an representation of the finished booking.
-     * @throws SearchBookingException
+     * @throws AddNewBookingException
      * @throws java.rmi.RemoteException
      */
     public BookingDTO addNewBooking(
@@ -43,7 +44,7 @@ public interface IBooking extends java.rmi.Remote {
             String driverAge,
             String driverLicenseNumber,
             String carLicensePlate
-    ) throws SearchBookingException, RemoteException;
+    ) throws AddNewBookingException, RemoteException;
 
     /**
      *  Search for a booking via a driversLicenseNumber

@@ -1,6 +1,7 @@
 package contracts;
 
 import DTOs.BookingDTO;
+import DTOs.BookingIdentifier;
 import exceptions.AddNewBookingException;
 import exceptions.CancelBookingException;
 import exceptions.SearchBookingException;
@@ -37,7 +38,7 @@ public class BookingFacade implements IBooking {
     }
 
     @Override
-    public boolean cancelBooking(String bookingIdentifier) throws CancelBookingException, RemoteException {
+    public boolean cancelBooking(BookingIdentifier bookingIdentifier) throws CancelBookingException, RemoteException {
 
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
