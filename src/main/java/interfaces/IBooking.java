@@ -1,6 +1,7 @@
 package interfaces;
 
 import DTOs.BookingDTO;
+import DTOs.BookingIdentifier;
 import exceptions.CancelBookingException;
 import exceptions.SearchBookingException;
 import java.rmi.RemoteException;
@@ -66,5 +67,5 @@ public interface IBooking extends java.rmi.Remote {
      * @throws CancelBookingException
      * @since 1.0
      */
-    boolean cancelBooking(String bookingIdentifier) throws CancelBookingException, RemoteException;
+    boolean cancelBooking(BookingIdentifier bookingIdentifier) throws CancelBookingException, RemoteException;
 }
