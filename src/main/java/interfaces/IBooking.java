@@ -42,11 +42,9 @@ public interface IBooking extends java.rmi.Remote {
      * 
      *
      * @param bookingIdentifier this is a booking id.
-     * @return boolean this is a parameter that will return if the operation was
-     * successful.
      * @throws java.rmi.RemoteException
      * @throws CancelBookingException
      * @since 1.0
      */
-    boolean cancelBooking(BookingIdentifier bookingIdentifier) throws CancelBookingException, RemoteException;
+    void cancelBooking(BookingIdentifier bookingIdentifier) throws CancelBookingException, RemoteException;
 }
