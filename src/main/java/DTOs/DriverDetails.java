@@ -1,26 +1,23 @@
 package DTOs;
 
-import entities.Driver;
+import DTOs.Identifiers.DriverIdentifier;
 
 /**
  * Class representing a Driver Data Transfer Object
+ *
  * @author Orchi
  */
-public class DriverDTO implements DTO<Driver> {
+public class DriverDetails extends DriverIdentifier {
 
     public String name;
     public int age;
     public String driverLicenseNumber;
 
-    public DriverDTO(String name, int age, String driverLicenseNumber) {
+    public DriverDetails(String id, String name, int age, String driverLicenseNumber) {
+        super(id);
         this.name = name;
         this.age = age;
         this.driverLicenseNumber = driverLicenseNumber;
-    }
-
-    @Override
-    public Driver fromDTO() {
-        return new Driver(name, age, driverLicenseNumber);
     }
 
 }

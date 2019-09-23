@@ -1,7 +1,7 @@
 package interfaces;
 
-import DTOs.BookingDTO;
-import DTOs.BookingIdentifier;
+import DTOs.BookingDetails;
+import DTOs.Identifiers.BookingIdentifier;
 import exceptions.AddNewBookingException;
 import exceptions.CancelBookingException;
 import exceptions.SearchBookingException;
@@ -19,32 +19,12 @@ public interface IBooking extends java.rmi.Remote {
      * addNewBooking This method is used to create a new booking in the system
      * and database.
      *
-     * @param carTypeName
-     * @param pickUpCity
-     * @param pickUpLocation
-     * @param deliveryLocation
-     * @param startDate
-     * @param endDate
-     * @param driverName
-     * @param driverAge
-     * @param driverLicenseNumber
-     * @param carLicensePlate
-     * @return BookingDTO an representation of the finished booking.
+     * @param booking
+     * @return BookingDetails an representation of the finished booking.
      * @throws AddNewBookingException
      * @throws java.rmi.RemoteException
      */
-    public BookingDTO addNewBooking(
-            String carTypeName,
-            String pickUpCity,
-            String pickUpLocation,
-            String deliveryLocation,
-            String startDate,
-            String endDate,
-            String driverName,
-            String driverAge,
-            String driverLicenseNumber,
-            String carLicensePlate
-    ) throws AddNewBookingException, RemoteException;
+    public BookingDetails addNewBooking(BookingDetails booking) throws AddNewBookingException, RemoteException;
 
     /**
      *  Search for a booking via a driversLicenseNumber
@@ -54,7 +34,7 @@ public interface IBooking extends java.rmi.Remote {
      * @throws SearchBookingException
      * @throws java.rmi.RemoteException
      */
-    public List<BookingDTO> searchBooking(String driverLicenseNumber) throws SearchBookingException, RemoteException;
+    public List<BookingDetails> searchBooking(String driverLicenseNumber) throws SearchBookingException, RemoteException;
 
     /**
      * cancelBooking This method takes care of marking a booking as cancelled.
