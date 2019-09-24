@@ -15,7 +15,7 @@
 
 *Jacob Sørensen*
 
-*Alexander Winther Hørsted-Andersen*
+*Mathias Brinkmann Igel* 
 
 ### Backend
 
@@ -25,6 +25,6 @@
 
 *Stanislav Novitski*
 
-*Mathias Brinkmann Igel* 
+*Alexander Winther Hørsted-Andersen*
 
 *David de Lima Fraga Alves* 
