@@ -15,34 +15,34 @@ import java.util.List;
 public interface IBooking extends java.rmi.Remote {
 
     /**
-     * addNewBooking This method is used to create a new booking in the system
+     * addNewBooking This method is used to create a new bookingId in the system
      * and database.
      *
-     * @param booking a BookingIdentifier DTO object implementation
-     * @return BookingIdentifier an representation of the finished booking.
+     * @param bookingId a BookingIdentifier DTO object implementation
+     * @return BookingIdentifier an representation of the finished bookingId.
      * @throws AddNewBookingException
      * @throws java.rmi.RemoteException
      */
-    public BookingIdentifier addNewBooking(BookingIdentifier booking) throws AddNewBookingException, RemoteException;
+    public BookingIdentifier addNewBooking(BookingIdentifier bookingId) throws AddNewBookingException, RemoteException;
 
     /**
      * Search for a booking via a driversLicenseNumber
      *
-     * @param id
+     * @param dirverId
      * @return List of BookingDetails DTO objects
      * @throws SearchBookingException
      * @throws java.rmi.RemoteException
      */
-    public List<BookingIdentifier> searchBooking(DriverIdentifier id) throws SearchBookingException, RemoteException;
+    public List<BookingIdentifier> searchBooking(DriverIdentifier dirverId) throws SearchBookingException, RemoteException;
 
     /**
      * cancelBooking This method takes care of marking a booking as cancelled.
-     * it needs a bookingIdentifier to cancel a booking.
+     * it needs a bookingId to cancel a booking.
      *
      *
-     * @param bookingIdentifier this is a booking id.
+     * @param bookingId this is a booking id.
      * @throws java.rmi.RemoteException
      * @since 1.0
      */
-    void cancelBooking(BookingIdentifier bookingIdentifier) throws RemoteException;
+    void cancelBooking(BookingIdentifier bookingId) throws RemoteException;
 }
