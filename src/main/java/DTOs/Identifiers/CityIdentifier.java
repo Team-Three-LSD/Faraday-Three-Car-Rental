@@ -1,16 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DTOs.Identifiers;
 
 /**
+ * CarIdentifier This is the data transmission object used for identifying a
+ * city
  *
- * @author stanislavnovitski
+ * @since 1.0
  */
 public abstract class CityIdentifier {
 
+    /**
+     * Used to specify the id of the city
+     *
+     * @since 1.0
+     */
     private String id;
 
     public CityIdentifier(String id) {
@@ -20,9 +22,4 @@ public abstract class CityIdentifier {
     public String getId() {
         return id;
     }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
 }

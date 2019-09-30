@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DTOs;
 
 import DTOs.Identifiers.CarIdentifier;
 import DTOs.Identifiers.StationIdentifier;
 import java.util.List;
 
-/**
- *
- * @author stanislavnovitski
- */
 public class HotelDetails extends StationIdentifier {
 
     private String name;
@@ -30,4 +21,13 @@ public class HotelDetails extends StationIdentifier {
         this.cityName = cityName;
     }
 
+    public String getName() { return name; }
+
+    public String getAddress() { return address; }
+
+    public float getStarRating() { return starRating; }
+
+    public List<CarIdentifier> getCars() { return cars; }
+
+    public String getCityName() { return cityName; }
 }

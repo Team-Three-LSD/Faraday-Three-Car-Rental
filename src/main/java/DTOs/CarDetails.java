@@ -2,11 +2,6 @@ package DTOs;
 
 import DTOs.Identifiers.CarIdentifier;
 
-/**
- * Class representing a Car Data Transfer Object
- *
- * @author stanislavnovitski
- */
 public class CarDetails extends CarIdentifier {
 
     private CarTypeDetails carType;
@@ -18,4 +13,7 @@ public class CarDetails extends CarIdentifier {
         this.licensePlate = licensePlate;
     }
 
+    public CarTypeDetails getCarType() { return carType; }
+
+    public String getLicensePlate() { return licensePlate; }
 }

@@ -20,21 +20,21 @@ public interface IBooking extends java.rmi.Remote {
      * and database.
      *
      * @param bookingId a BookingIdentifier DTO object implementation
-     * @return BookingIdentifier an representation of the finished bookingId.
-     * @throws AddNewBookingException
-     * @throws java.rmi.RemoteException
+     * @return BookingIdentifier a representation of the finished booking object
+     * @throws AddNewBookingException thrown if data can't be parsed
+     * @throws java.rmi.RemoteException thrown for unhandled errors
      */
-    public BookingIdentifier addNewBooking(BookingIdentifier bookingId) throws AddNewBookingException, RemoteException;
+    BookingIdentifier addNewBooking(BookingIdentifier bookingId) throws AddNewBookingException, RemoteException;
 
     /**
      * Search for a booking via a DriverIdentifier
      *
-     * @param driverId
+     * @param driverId a DriverIdentifier DTO object implementation
      * @return List of BookingDetails DTO objects
-     * @throws SearchBookingException
-     * @throws java.rmi.RemoteException
+     * @throws SearchBookingException thrown if data can't be parsed
+     * @throws java.rmi.RemoteException thrown for unhandled errors
      */
-    public List<BookingIdentifier> searchBookings(DriverIdentifier driverId) throws SearchBookingException, RemoteException;
+    List<BookingIdentifier> searchBooking(DriverIdentifier driverId) throws SearchBookingException, RemoteException;
 
     /**
      * getSpecificBooking method returns a BookingDetails object for the requested
@@ -45,15 +45,14 @@ public interface IBooking extends java.rmi.Remote {
      * @throws GetSpecificBookingException
      * @throws RemoteException
      */
-    public BookingIdentifier getSpecificBooking(BookingIdentifier bookingId) throws GetSpecificBookingException, RemoteException;
+    BookingIdentifier getSpecificBooking(BookingIdentifier bookingId) throws GetSpecificBookingException, RemoteException;
     
     /**
      * cancelBooking This method takes care of marking a booking as cancelled.
      * it needs a bookingId to cancel a booking.
      *
-     *
-     * @param bookingId this is a booking id.
-     * @throws java.rmi.RemoteException
+     * @param bookingId a BookingIdentifier DTO object implementation
+     * @throws java.rmi.RemoteException thrown for unhandled errors
      * @since 1.0
      */
     void cancelBooking(BookingIdentifier bookingId) throws RemoteException;

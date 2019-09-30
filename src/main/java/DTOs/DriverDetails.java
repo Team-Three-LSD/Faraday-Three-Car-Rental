@@ -2,16 +2,11 @@ package DTOs;
 
 import DTOs.Identifiers.DriverIdentifier;
 
-/**
- * Class representing a Driver Data Transfer Object
- *
- * @author Orchi
- */
 public class DriverDetails extends DriverIdentifier {
 
-    public String name;
-    public int age;
-    public String driverLicenseNumber;
+    private String name;
+    private int age;
+    private String driverLicenseNumber;
 
     public DriverDetails(String id, String name, int age, String driverLicenseNumber) {
         super(id);
@@ -20,4 +15,9 @@ public class DriverDetails extends DriverIdentifier {
         this.driverLicenseNumber = driverLicenseNumber;
     }
 
+    public String getName() { return name; }
+
+    public int getAge() { return age; }
+
+    public String getDriverLicenseNumber() { return driverLicenseNumber; }
 }
