@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package interfaces;
 
 import DTOs.Identifiers.CarIdentifier;
@@ -29,5 +24,5 @@ public interface ICars extends Remote{
  can have length >= 0.
      * @since 1.0
      */
-    public List<CarIdentifier> GetAvailableCars(/* TODO ADD NEW DTO FOR THIS SCENARIO */) throws GetAvailableCarsException, RemoteException;
+    List<CarIdentifier> GetAvailableCars(/* TODO ADD NEW DTO FOR THIS SCENARIO */) throws GetAvailableCarsException, RemoteException;
 }

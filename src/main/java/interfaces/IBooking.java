@@ -20,20 +20,20 @@ public interface IBooking extends java.rmi.Remote {
      *
      * @param bookingId a BookingIdentifier DTO object implementation
      * @return BookingIdentifier a representation of the finished booking object
-     * @throws AddNewBookingException
-     * @throws java.rmi.RemoteException
+     * @throws AddNewBookingException thrown if data can't be parsed
+     * @throws java.rmi.RemoteException thrown for unhandled errors
      */
-    public BookingIdentifier addNewBooking(BookingIdentifier bookingId) throws AddNewBookingException, RemoteException;
+    BookingIdentifier addNewBooking(BookingIdentifier bookingId) throws AddNewBookingException, RemoteException;
 
     /**
      * Search for a booking via a driversLicenseNumber
      *
      * @param driverId a DriverIdentifier DTO object implementation
      * @return List of BookingDetails DTO objects
-     * @throws SearchBookingException
-     * @throws java.rmi.RemoteException
+     * @throws SearchBookingException thrown if data can't be parsed
+     * @throws java.rmi.RemoteException thrown for unhandled errors
      */
-    public List<BookingIdentifier> searchBooking(DriverIdentifier driverId) throws SearchBookingException, RemoteException;
+    List<BookingIdentifier> searchBooking(DriverIdentifier driverId) throws SearchBookingException, RemoteException;
 
     /**
      * cancelBooking This method takes care of marking a booking as cancelled
@@ -41,7 +41,7 @@ public interface IBooking extends java.rmi.Remote {
      *
      *
      * @param bookingId a BookingIdentifier DTO object implementation
-     * @throws java.rmi.RemoteException
+     * @throws java.rmi.RemoteException thrown for unhandled errors
      * @since 1.0
      */
     void cancelBooking(BookingIdentifier bookingId) throws RemoteException;
