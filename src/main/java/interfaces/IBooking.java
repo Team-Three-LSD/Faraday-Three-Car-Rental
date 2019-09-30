@@ -1,10 +1,8 @@
 package interfaces;
 
-import DTOs.BookingDetails;
 import DTOs.Identifiers.BookingIdentifier;
 import DTOs.Identifiers.DriverIdentifier;
 import exceptions.AddNewBookingException;
-import exceptions.CancelBookingException;
 import exceptions.SearchBookingException;
 import java.rmi.RemoteException;
 import java.util.List;
@@ -44,8 +42,7 @@ public interface IBooking extends java.rmi.Remote {
      *
      * @param bookingIdentifier this is a booking id.
      * @throws java.rmi.RemoteException
-     * @throws CancelBookingException
      * @since 1.0
      */
-    void cancelBooking(BookingIdentifier bookingIdentifier) throws CancelBookingException, RemoteException;
+    void cancelBooking(BookingIdentifier bookingIdentifier) throws RemoteException;
 }
