@@ -22,9 +22,4 @@ public abstract class BookingIdentifier {
     public String getBookingId() {
         return bookingId;
     }
-
-    public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
-    }
-
 }

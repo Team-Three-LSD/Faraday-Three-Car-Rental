@@ -18,4 +18,10 @@ public class BookingSummary extends BookingIdentifier {
         this.pickUpPlace = pickUpPlace;
         this.car = car;
     }
+
+    public LocalDateTime getPickUpTime() { return pickUpTime; }
+
+    public StationIdentifier getPickUpPlace() { return pickUpPlace; }
+
+    public CarIdentifier getCar() { return car; }
 }

@@ -5,10 +5,6 @@
  */
 package exceptions;
 
-/**
- *
- * @author Orchi
- */
 public class SearchBookingException extends RuntimeException{
 
     public SearchBookingException(String message) {

@@ -6,11 +6,18 @@
 package DTOs.Identifiers;
 
 /**
+ * BookingIdentifier This is the data transmission object used for identifying a
+ * driver
  *
- * @author stanislavnovitski
+ * @since 1.0
  */
 public abstract class DriverIdentifier {
 
+    /**
+     * Used to specify the id of the driver
+     *
+     * @since 1.0
+     */
     private String id;
 
     public DriverIdentifier(String id) {
@@ -20,9 +27,4 @@ public abstract class DriverIdentifier {
     public String getId() {
         return id;
     }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
 }

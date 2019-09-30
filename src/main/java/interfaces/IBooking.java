@@ -8,7 +8,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 /**
- * This is an interface used, between the frontend and the backend.
+ * This is an interface used between the frontend and the backend.
  *
  * @since 1.0
  */
@@ -19,7 +19,7 @@ public interface IBooking extends java.rmi.Remote {
      * and database.
      *
      * @param bookingId a BookingIdentifier DTO object implementation
-     * @return BookingIdentifier an representation of the finished bookingId.
+     * @return BookingIdentifier a representation of the finished booking object
      * @throws AddNewBookingException
      * @throws java.rmi.RemoteException
      */
@@ -28,19 +28,19 @@ public interface IBooking extends java.rmi.Remote {
     /**
      * Search for a booking via a driversLicenseNumber
      *
-     * @param dirverId
+     * @param driverId a DriverIdentifier DTO object implementation
      * @return List of BookingDetails DTO objects
      * @throws SearchBookingException
      * @throws java.rmi.RemoteException
      */
-    public List<BookingIdentifier> searchBooking(DriverIdentifier dirverId) throws SearchBookingException, RemoteException;
+    public List<BookingIdentifier> searchBooking(DriverIdentifier driverId) throws SearchBookingException, RemoteException;
 
     /**
-     * cancelBooking This method takes care of marking a booking as cancelled.
+     * cancelBooking This method takes care of marking a booking as cancelled
      * it needs a bookingId to cancel a booking.
      *
      *
-     * @param bookingId this is a booking id.
+     * @param bookingId a BookingIdentifier DTO object implementation
      * @throws java.rmi.RemoteException
      * @since 1.0
      */

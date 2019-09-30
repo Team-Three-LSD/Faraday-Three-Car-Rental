@@ -5,10 +5,6 @@
  */
 package exceptions;
 
-/**
- *
- * @author Orchi
- */
 public class GetAvailableCarsException extends RuntimeException{
 
     public GetAvailableCarsException(String message) {

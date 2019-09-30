@@ -7,10 +7,6 @@ package DTOs;
 
 import DTOs.Identifiers.CarTypeIdentifier;
 
-/**
- *
- * @author stanislavnovitski
- */
 public class CarTypeDetails extends CarTypeIdentifier {
 
     private String name;
@@ -28,24 +24,11 @@ public class CarTypeDetails extends CarTypeIdentifier {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getNumberOfSeats() {
         return numberOfSeats;
-    }
-
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
     }
 
     public double getPricePerDay() {
         return pricePerDay;
     }
-
-    public void setPricePerDay(double pricePerDay) {
-        this.pricePerDay = pricePerDay;
-    }
-
 }

@@ -5,10 +5,6 @@
  */
 package exceptions;
 
-/**
- *
- * @author Orchi
- */
 public class AddNewBookingException extends RuntimeException{
 
     public AddNewBookingException(String message) {

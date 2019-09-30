@@ -6,11 +6,6 @@ import DTOs.Identifiers.DriverIdentifier;
 import DTOs.Identifiers.StationIdentifier;
 import java.time.LocalDateTime;
 
-/**
- * Class representing a Booking Data Transfer Object
- *
- * @author Orchi
- */
 public class BookingDetails extends BookingIdentifier {
 
     private LocalDateTime pickUpTime;
@@ -32,4 +27,17 @@ public class BookingDetails extends BookingIdentifier {
         this.totalPrice = totalPrice;
     }
 
+    public LocalDateTime getPickUpTime() { return pickUpTime; }
+
+    public LocalDateTime getDeliveryTime() { return deliveryTime; }
+
+    public StationIdentifier getPickUpPlace() { return pickUpPlace; }
+
+    public StationIdentifier getDeliveryPlace() { return deliveryPlace; }
+
+    public DriverIdentifier getDriver() { return driver; }
+
+    public CarIdentifier getCar() { return car; }
+
+    public double getTotalPrice() { return totalPrice; }
 }

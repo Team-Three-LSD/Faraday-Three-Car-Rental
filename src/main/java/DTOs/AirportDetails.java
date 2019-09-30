@@ -9,10 +9,6 @@ import DTOs.Identifiers.CarIdentifier;
 import DTOs.Identifiers.StationIdentifier;
 import java.util.List;
 
-/**
- *
- * @author stanislavnovitski
- */
 public class AirportDetails extends StationIdentifier {
 
     private String code;
@@ -32,24 +28,13 @@ public class AirportDetails extends StationIdentifier {
         return code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public List<CarIdentifier> getCars() {
         return cars;
     }
 
-    public void setCars(List<CarIdentifier> cars) {
-        this.cars = cars;
-    }
-
+    public String getCityName() { return cityName; }
 }
