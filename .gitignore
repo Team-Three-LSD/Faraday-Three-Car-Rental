@@ -173,5 +173,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# VScode
+/.settings
+
 # End of https://www.gitignore.io/api/java,macos,windows,netbeans,intellij
 /target/

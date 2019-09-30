@@ -3,12 +3,13 @@ package interfaces;
 import DTOs.Identifiers.BookingIdentifier;
 import DTOs.Identifiers.DriverIdentifier;
 import exceptions.AddNewBookingException;
+import exceptions.GetSpecificBookingException;
 import exceptions.SearchBookingException;
 import java.rmi.RemoteException;
 import java.util.List;
 
 /**
- * This is an interface used between the frontend and the backend.
+ * This is an interface used, between the Frontend and the Backend.
  *
  * @since 1.0
  */
@@ -26,7 +27,7 @@ public interface IBooking extends java.rmi.Remote {
     BookingIdentifier addNewBooking(BookingIdentifier bookingId) throws AddNewBookingException, RemoteException;
 
     /**
-     * Search for a booking via a driversLicenseNumber
+     * Search for a booking via a DriverIdentifier
      *
      * @param driverId a DriverIdentifier DTO object implementation
      * @return List of BookingDetails DTO objects
@@ -36,9 +37,19 @@ public interface IBooking extends java.rmi.Remote {
     List<BookingIdentifier> searchBooking(DriverIdentifier driverId) throws SearchBookingException, RemoteException;
 
     /**
-     * cancelBooking This method takes care of marking a booking as cancelled
+     * getSpecificBooking method returns a BookingDetails object for the requested
+     * bookingId 
+     * 
+     * @param bookingId
+     * @return BookingDetails
+     * @throws GetSpecificBookingException
+     * @throws RemoteException
+     */
+    BookingIdentifier getSpecificBooking(BookingIdentifier bookingId) throws GetSpecificBookingException, RemoteException;
+    
+    /**
+     * cancelBooking This method takes care of marking a booking as cancelled.
      * it needs a bookingId to cancel a booking.
-     *
      *
      * @param bookingId a BookingIdentifier DTO object implementation
      * @throws java.rmi.RemoteException thrown for unhandled errors
