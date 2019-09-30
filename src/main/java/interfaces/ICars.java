@@ -18,10 +18,10 @@ public interface ICars extends Remote {
      * getAvailableCars This method returns a list containing 0 or more cars
      * that satisfies the search parameters
      *
-     * @param availabilty
+     * @param availability
      * @return A list of CarDetails
      * @throws GetAvailableCarsException
      * @throws RemoteException
      */
-    List<CarIdentifier> getAvailableCars(AvailabilityDetails availabilty) throws GetAvailableCarsException, RemoteException;
+    List<CarIdentifier> getAvailableCars(AvailabilityDetails availability) throws GetAvailableCarsException, RemoteException;
 }
