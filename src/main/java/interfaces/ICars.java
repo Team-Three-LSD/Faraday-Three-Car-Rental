@@ -15,7 +15,7 @@ import java.util.List;
 public interface ICars extends Remote {
 
     /**
-     * GetAvailableCars This method returns a list containing 0 or more cars
+     * getAvailableCars This method returns a list containing 0 or more cars
      * that satisfies the search parameters
      *
      * @param availabilty
@@ -23,5 +23,5 @@ public interface ICars extends Remote {
      * @throws GetAvailableCarsException
      * @throws RemoteException
      */
-    List<CarIdentifier> GetAvailableCars(AvailabilityDetails availabilty) throws GetAvailableCarsException, RemoteException;
+    List<CarIdentifier> getAvailableCars(AvailabilityDetails availabilty) throws GetAvailableCarsException, RemoteException;
 }
