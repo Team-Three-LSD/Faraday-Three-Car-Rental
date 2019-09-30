@@ -8,8 +8,9 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 /**
+ * This is an interface used, between the Frontend and the Backend.
  *
- * @author stanislavnovitski
+ * @since 1.0
  */
 public interface ICars extends Remote {
 
