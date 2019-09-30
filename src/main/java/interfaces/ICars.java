@@ -5,6 +5,7 @@
  */
 package interfaces;
 
+import DTOs.AvailabilityDetails;
 import DTOs.Identifiers.CarIdentifier;
 import exceptions.GetAvailableCarsException;
 import java.rmi.Remote;
@@ -29,5 +30,5 @@ public interface ICars extends Remote{
  can have length >= 0.
      * @since 1.0
      */
-    public List<CarIdentifier> GetAvailableCars(/* TODO ADD NEW DTO FOR THIS SCENARIO */) throws GetAvailableCarsException, RemoteException;
+    public List<CarIdentifier> GetAvailableCars(AvailabilityDetails dto) throws GetAvailableCarsException, RemoteException;
 }
